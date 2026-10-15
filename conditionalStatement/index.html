@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Conditional statement -->
+     <!-- if(condition) {
+          code to be executed
+      }-->
+     <!-- else if(condition) {
+           code to be executed
+      }-->
+     <!-- else{
+          code to be executed
+      }-->
+
+           <!-- Using logical operator AND with conditional statement -->
+            <!--  -->
+           <!-- Ternary operator -->
+
+    <p id="currentTime">Good Evening!</p>
+    <p id="ageChecker">You can't drive!</p>
+    <p id = "age"> </p>
+    <p id="ageValidate"></p>
+    <p id="colorChecker"> </p>
+
+
+    <script>
+        let greetings = new Date().getHours();
+        if(greetings <= 18){
+            document.getElementById('currentTime').innerHTML = "Good day!"
+        }
+        // first method
+        const age = 18;
+        let text = "You can drive!"
+        if(age < 18 ){
+            document.getElementById('ageChecker').innerHTML = text
+        }
+        // second method
+        const age2 = 20
+        let text2 = "You can drive!"
+        if(age2 > 12){
+            document.getElementById("age").innerHTML = text2
+        }
+        else if(age2 < 12){
+            document.getElementById('age').innerHTML = "You can't drive"
+        }
+        // AND operator using only if statement
+        const userAge = 22;
+        const country = "canada"
+        let text3 = "Driving is not allowed!"
+
+        // if(userAge == 12 && country == "canada"){
+        //     text3 = "Driving is allowed"
+        // }
+
+        if(userAge == 22 && country == "canada"){
+            text3 = "You are eligible to drive!"
+        }
+          document.getElementById('ageValidate').innerHTML = text3
+
+// Using both if, else if and else
+        let time = new Date().getHours()
+
+        if(time < 10){
+            console.log("Good morning")
+        }
+        else if (time < 2){
+            console.log("Good afternoon")
+        }
+        else {
+            console.log("Good Evening")
+        }
+
+        // Ternary operator
+        // (condition) ? expression1 : expression2
+        const color = "blue"
+        let textColor = (color !== "green") ? "You choose the wrong color" : "You're right!"
+        document.getElementById("colorChecker").innerHTML = textColor;
+
+        // console.log(10 -(0.2 * 10))
+    </script>
+</body>
+</html>
